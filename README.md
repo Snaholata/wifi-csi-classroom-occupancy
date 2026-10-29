@@ -3,7 +3,7 @@
 Estimating the number of people in a classroom from WiFi CSI collected with low-cost ESP32
 microcontrollers. This repository contains the machine learning and deep learning code from my
 B.Sc. thesis at CUET (Dept. of CSE, supervised by Dr. Asaduzzaman), published at
-**ICCIT 2023** — *[TODO: add full paper title, DOI/IEEE Xplore link]*.
+**ICCIT 2023** — *A Framework to Estimate Classroom Occupancy using WiFi Channel State Information, https://ieeexplore.ieee.org/abstract/document/10441074*.
 
 ## Overview
 
@@ -22,43 +22,6 @@ Pipeline:
 |---|---|---|
 | Machine learning | BaggingRegressor with LightGBM base estimator (also XGBoost, Random Forest) | 0.26 |
 | Deep learning | Concatenated CNN + LSTM | 0.50 |
-
-*[TODO: re-run the notebooks and confirm these numbers; see "Notes" below.]*
-
-## Repository structure
-
-```
-notebooks/
-  01_cnn_lstm_concat_model.ipynb          # CNN + LSTM, input reshaped to 13x4
-  02_ensemble_bagging_lgbm_xgb_rf.ipynb   # Bagging ensemble with GridSearchCV
-data/
-  README.md                               # expected data format
-requirements.txt
-```
-
-## Getting started
-
-```bash
-git clone https://github.com/<your-username>/wifi-csi-classroom-occupancy.git
-cd wifi-csi-classroom-occupancy
-python -m venv .venv && source .venv/bin/activate
-pip install -r requirements.txt
-jupyter notebook
-```
-
-Place `labelled_final.csv` in `data/` and change the path in the first data-loading cell
-(the notebooks currently read `/content/labelled_final.csv`, a Colab path).
-
-## Notes
-
-- Train/validation split is 75/25. Please check that the final model is evaluated only on data
-  it did not train on before quoting results.
-
-## Citation
-
-```
-[TODO: add BibTeX for the ICCIT 2023 paper]
-```
 
 ## Contact
 
