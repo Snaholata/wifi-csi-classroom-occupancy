@@ -1,0 +1,12 @@
+# The notebooks were written for Google Colab (2023) with older Keras imports
+# (keras.utils.np_utils). Pin versions that match, or update the imports.
+numpy
+pandas
+scikit-learn
+lightgbm
+xgboost
+matplotlib
+seaborn
+tensorflow<2.11
+keras<2.11
+jupyter
